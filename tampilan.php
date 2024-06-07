@@ -30,6 +30,7 @@ if( isset($_POST["cari"]) ) {
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+<div class="kartu">
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
@@ -65,6 +66,7 @@ if( isset($_POST["cari"]) ) {
         </form>
 </div>
 </div>
+</div>
 </nav>
 <!-- akhir navbar -->
 
@@ -80,25 +82,22 @@ if( isset($_POST["cari"]) ) {
         <div class="carousel-item active">
         <img src="img/car bg.jpg" class="d-block w-100" alt="...">
         <div class="carousel-caption">
-            <h5>First slide label</h5>
+            <h5>Luxury British Sport Car</h5>
             <p>Some representative placeholder content for the first slide.</p>
-            <p><a href="#" class="btn btn-warning mt-3">Learn More</a></p>
         </div>
         </div>
         <div class="carousel-item">
         <img src="img/car bg.jpg" class="d-block w-100" alt="...">
         <div class="carousel-caption">
-            <h5>Second slide label</h5>
+            <h5>The New Power Within</h5>
             <p>Some representative placeholder content for the second slide.</p>
-            <p><a href="#" class="btn btn-warning mt-3">Learn More</a></p>
         </div>
         </div>
         <div class="carousel-item">
         <img src="img/car bg.jpg" class="d-block w-100" alt="...">
         <div class="carousel-caption">
-            <h5>Third slide label</h5>
+            <h5>The Louwman Museum The Hague</h5>
             <p>Some representative placeholder content for the third slide.</p>
-            <p><a href="#" class="btn btn-warning mt-3">Learn More</a></p>
         </div>
         </div>
     </div>
