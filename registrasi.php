@@ -19,7 +19,7 @@ if( isset($_POST["registrasi"]) ) {
     }
 }
 
-
+ 
 
 ?>
 <!DOCTYPE html>
@@ -29,6 +29,7 @@ if( isset($_POST["registrasi"]) ) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halaman Registrasi</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/regis.css">
     <style>
         label {
             display: block;
@@ -38,7 +39,7 @@ if( isset($_POST["registrasi"]) ) {
 </head>
 <body>
 
-<h1>Halaman Registrasi</h1>
+<h1 class="text-center pt-4">Halaman Registrasi</h1>
 <style>
 
 
@@ -56,7 +57,7 @@ if( isset($_POST["registrasi"]) ) {
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Konfirmasi Password</label>
-            <input type="konfirmasi password" class="form-control" id="exampleInputPassword1" name="password2">
+            <input type="password" class="form-control" id="exampleInputPassword1" name="password2">
         </div>
         <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">

@@ -1,61 +1,50 @@
 <?php
-$conn = mysqli_connect ('localhost', 'root', '','pw2024_tubes_233040074');
-   return $conn;
-
+$conn = mysqli_connect('localhost', 'root', '','pw2024_tubes_233040074');
 
 function query($query) {
     global $conn;
 
     $result = mysqli_query($conn, $query);
 
-    $rows = [];
+    $rows =[];
     
     while ($row = mysqli_fetch_assoc($result)) {
         $rows[] = $row;
-    };
+    }
 
     return $rows;
 }
-
 function tambah($data) {
     global $conn;
 
     $Merek = htmlspecialchars($data["Merek"]);
     $Harga = htmlspecialchars($data["Harga"]);
-    $Varian = htmlspecialchars($data["Varian"]);
-    $BBM = htmlspecialchars($data["BBM"]);
     $Launching = htmlspecialchars($data["Launching"]);
     $Mesin = htmlspecialchars($data["Mesin"]);
-    $Tenaga = htmlspecialchars($data["Tenaga"]);
     $Deskripsi = htmlspecialchars($data["Deskripsi"]);
+    $kategori_id = htmlspecialchars($data["kategori_id"]);
     $Gambar = upload();
 
-
-    $query = "INSERT INTO spesifikasi
+    $query = "INSERT INTO spesifikasi (Merek, Harga, Launching, Mesin, Deskripsi, Gambar, kategori_id)
                 VALUES
-                     (NULL, '$Merek', '$Harga', '$Varian', '$BBM', '$Launching', '$Mesin', '$Tenaga', '$Deskripsi', '$Gambar')
-                        ";
-                        
+                     ('$Merek', '$Harga', '$Launching', '$Mesin', '$Deskripsi', '$Gambar', '$kategori_id')";
+                
+    mysqli_query($conn, $query);
 
-mysqli_query($conn, $query);
-
-return mysqli_affected_rows($conn);
+    return mysqli_affected_rows($conn);
 }
 
-function ubah($data) {
+function ubah($data){
     global $conn;
 
     $id = $data["id"];
     $Merek = htmlspecialchars($data["Merek"]);
     $Harga = htmlspecialchars($data["Harga"]);
-    $Varian = htmlspecialchars($data["Varian"]);
-    $BBM = htmlspecialchars($data["BBM"]);
     $Launching = htmlspecialchars($data["Launching"]);
     $Mesin = htmlspecialchars($data["Mesin"]);
-    $Tenaga = htmlspecialchars($data["Tenaga"]);
+    $Deskripsi = htmlspecialchars($data["Deskripsi"]);
     $GambarLama = htmlspecialchars($data["GambarLama"]);
-
-    $Gambar = htmlspecialchars($data["Gambar"]);
+    $kategori_id = htmlspecialchars($data["kategori_id"]);
 
     if ($_FILES['Gambar']['error'] === 4) {
         $Gambar = $GambarLama;
@@ -65,18 +54,17 @@ function ubah($data) {
     $query = "UPDATE spesifikasi SET
                 Merek = '$Merek',
                 Harga = '$Harga',
-                Varian = '$Varian',
-                BBM = '$BBM',
                 Launching = '$Launching',
                 Mesin = '$Mesin',
-                Tenaga = '$Tenaga',
-                Gambar = '$Gambar'
+                Deskripsi = '$Deskripsi',
+                Gambar = '$Gambar',
+                kategori_id ='$kategori_id'
                 WHERE id = $id
                 ";
-
-mysqli_query($conn, $query);
-
-return mysqli_affected_rows($conn);
+                
+    mysqli_query($conn, $query);
+    
+    return mysqli_affected_rows($conn);
 }
 
 function upload() {
@@ -130,11 +118,9 @@ function cari($keyword) {
                 WHERE
                 Merek LIKE '%$keyword%' OR
                 Harga LIKE '%$keyword%' OR
-                Varian LIKE '%$keyword%' OR
-                BBM LIKE '%$keyword%' OR
                 Launching LIKE '%$keyword%' OR
                 Mesin LIKE '%$keyword%' OR
-                Tenaga LIKE '%$keyword%' OR
+                Deskripsi LIKE '%$keyword%' OR
                 Gambar LIKE '%$keyword%'
                 ";
     return query($query);

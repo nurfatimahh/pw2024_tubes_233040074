@@ -1,0 +1,16 @@
+.container{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+
+
+body {
+    background: linear-gradient(rgb(68, 76, 222), rgb(16, 16, 250));
+}
+h1{
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    text-align: center;
+} 
