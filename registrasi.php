@@ -1,15 +1,15 @@
 <?php
 require 'functions.php';
 
-if( isset($_POST["registrasi"]) ) {
-    if( registrasi($_POST) > 0 ) {
+if (isset($_POST["registrasi"])) {
+    if (registrasi($_POST) > 0) {
         echo "
             <script>
                 alert('Data Berhasil Ditambahkan');
                 document.location.href = 'index.php';
             </script>
         ";
-    }else{
+    } else {
         echo "
             <script>
                 alert('Data Gagal Ditambahkan');
@@ -19,11 +19,12 @@ if( isset($_POST["registrasi"]) ) {
     }
 }
 
- 
+
 
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,36 +38,38 @@ if( isset($_POST["registrasi"]) ) {
         }
     </style>
 </head>
+
 <body>
 
-<h1 class="text-center pt-4">Halaman Registrasi</h1>
-<style>
+    <h1 class="text-center pt-4">Halaman Registrasi</h1>
+    <style>
 
 
-</style>
+    </style>
 
-<div class="container">
-    <form action="" method="post">
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Username</label>
-            <input type="username" class="form-control" id="exampleInputEmail1" aria-describedby="name" length="100" name="username">
-        </div>
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" name="password">
-        </div>
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Konfirmasi Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" name="password2">
-        </div>
-        <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
-        <button name="registrasi" type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    <div class="container">
+        <form action="" method="post">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Username</label>
+                <input type="username" class="form-control" id="exampleInputEmail1" aria-describedby="name" length="100" name="username">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Konfirmasi Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" name="password2">
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button name="registrasi" type="submit" class="btn btn-primary">Submit</button>
+        </form>
 
-</div>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 </body>
+
 </html>

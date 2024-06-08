@@ -1,16 +1,40 @@
-.container{
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 30px;
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
 }
-
-
-
 body {
-    background: linear-gradient(rgb(68, 76, 222), rgb(16, 16, 250));
+  background: linear-gradient(rgb(68, 76, 222), rgb(16, 16, 250));
 }
-h1{
-    color: rgb(255, 255, 255);
-    font-size: 35px;
-    text-align: center;
+h1 {
+  color: rgb(255, 255, 255);
+  font-size: 35px;
+  text-align: center;
+}
+footer {
+  background-color: #98814a;
+  text-align: center;
+  padding: 3rem 1;
+}
+footer .social {
+  padding: 3rem 0;
+  padding: 4rem;
+}
+
+footer .link a:hover {
+  color: #3e3a30;
+}
+footer .link {
+  margin-bottom: 3rem;
+}
+footer .link a {
+  color: whitesmoke;
+  padding: 0.5rem 0.7rem;
+}
+footer .credit {
+  font-size: 1rem;
+}
+footer .credit a {
+  color: #3b2103;
+  font-weight: bold;
 }

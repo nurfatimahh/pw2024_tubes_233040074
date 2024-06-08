@@ -1,112 +1,153 @@
-*{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-} 
-body{
-    background: f1fbff;
+* {
+  font-family: 'Playfair Display', sans-serif;
+  padding: 0;
+  margin: 0;
 }
-.section-padding{
-    padding: 50px 0;
+body {
+  background: f1fbff;
 }
-.carousel-item{
-    height: 100vh;
-    min-width: 300px;
+.section-padding {
+  padding: 40px 0;
 }
-.carousel-caption{
-    bottom: 150px;
-    z-index: 2;
+.carousel-item {
+  height: 100vh;
+  min-width: 300px;
 }
-.carousel-caption h5{
-    font-size: 60px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-top: 25px;
+.carousel-caption {
+  bottom: 150px;
+  z-index: 2;
 }
-.carousel-caption  p{
-    width: 60%;
-    margin: auto;
-    font-size: 20px;
-    line-height: 1.9;
+.carousel-caption h5 {
+  font-size: 60px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 25px;
+}
+.carousel-caption p {
+  width: 60%;
+  margin: auto;
+  font-size: 20px;
+  line-height: 1.9;
 }
 .carousel-inner::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(0,0,0,0.7);
-    z-index: 1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
 }
 .navbar {
-    padding: 15px 0;
-    background: #b02929;
-    border-bottom: 1px solid #eee;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
 }
-.navbar-nav a{
-    font-size: 10px;
-    text-transform: uppercase;
-    font-weight: 5;
+.navbar-nav a {
+  font-size: 15px;
+  font-weight: 5;
 }
-.navbar-light .navbar-brand{
-    color: #000;
-    font-size: 20px;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 2px;
+.navbar-light .navbar-brand {
+  color: #000;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 .navbar-light .navbar-brand:focus,
-.navbar-light .navbar-brand:hover{
-    color: #000;    
+.navbar-light .navbar-brand:hover {
+  color: #000;
 }
-.navbar-light .navbar-nav .navbar-link{
-    color: #000; 
+.navbar-light .navbar-nav .navbar-link {
+  color: #000;
 }
-.w-100{
-    height: 100vh;
+.w-100 {
+  height: 100vh;
 }
 /* *** responsive css *** */
 
-@media only screen and (max-width: 991px){
-    .navbar.nav{
-        text-align: center;
-    }
-    .navbar-caption{
-        bottom: 125px;
-    }
-    .carousel-caption h5{
-        font-size: 17px;
-    }
-    .carousel-caption a{
-        padding: 10px;
-    }
-    .carousel-caption p{
-        width: 100%;
-        margin: auto;
-        font-size: 14px;
-        line-height: 1.9;
-    }
-
+@media only screen and (max-width: 991px) {
+  .navbar.nav {
+    text-align: center;
+  }
+  .navbar-caption {
+    bottom: 125px;
+  }
+  .carousel-caption h5 {
+    font-size: 17px;
+  }
+  .carousel-caption a {
+    padding: 10px;
+  }
+  .carousel-caption p {
+    width: 100%;
+    margin: auto;
+    font-size: 14px;
+    line-height: 1.9;
+  }
 }
 
-@media only screen and (max-width: 767px){
-    .navbar.nav{
-        text-align: center;
-    }
-    .navbar-caption{
-        bottom: 125px;
-    }
-    .carousel-caption h5{
-        font-size: 17px;
-    }
-    .carousel-caption a{
-        padding: 10px;
-    }
-    .carousel-caption p{
-        width: 100%;
-        margin: auto;
-        font-size: 14px;
-        line-height: 1.9;
-    }
-
+@media only screen and (max-width: 767px) {
+  .navbar.nav {
+    text-align: center;
+  }
+  .navbar-caption {
+    bottom: 125px;
+  }
+  .carousel-caption h5 {
+    font-size: 17px;
+  }
+  .carousel-caption a {
+    padding: 10px;
+  }
+  .carousel-caption p {
+    width: 100%;
+    margin: auto;
+    font-size: 14px;
+    line-height: 1.9;
+  }
 }
 
+#about {
+  height: 80%;
+  margin-top: 100px;
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    margin-top: 100px;
+  }
+}
+
+footer {
+  background-color: rgb(214, 214, 198);
+  text-align: center;
+}
+footer .social {
+  padding: 3rem 0;
+  padding: 4rem;
+}
+
+footer .link a:hover {
+  color: #3e3a30;
+}
+footer .link {
+  margin-bottom: 10px;
+}
+footer .link a {
+  color: #000;
+  padding: 0.5rem 0.7rem;
+  text-decoration: none;
+}
+footer .credit {
+  font-size: 1rem;
+}
+footer .credit a {
+  color: #3b2103;
+  font-weight: bold;
+}
+
+.cate {
+  margin-top: 10%;
+  margin-bottom: 10%;
+}

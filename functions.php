@@ -1,12 +1,13 @@
 <?php
-$conn = mysqli_connect('localhost', 'root', '','pw2024_tubes_233040074');
+$conn = mysqli_connect('localhost', 'root', '', 'pw2024_tubes_233040074');
 
-function query($query) {
+function query($query)
+{
     global $conn;
 
     $result = mysqli_query($conn, $query);
-    
-    $rows =[];
+
+    $rows = [];
 
     while ($row = mysqli_fetch_assoc($result)) {
         $rows[] = $row;
@@ -14,7 +15,8 @@ function query($query) {
     return $rows;
 }
 
-function tambah($data) {
+function tambah($data)
+{
     global $conn;
 
     $Merek = htmlspecialchars($data["Merek"]);
@@ -28,13 +30,14 @@ function tambah($data) {
     $query = "INSERT INTO spesifikasi (Merek, Harga, Launching, Mesin, Deskripsi, Gambar, kategori_id)
                 VALUES
                      ('$Merek', '$Harga', '$Launching', '$Mesin', '$Deskripsi', '$Gambar', '$kategori_id')";
-                
+
     mysqli_query($conn, $query);
 
     return mysqli_affected_rows($conn);
 }
 
-function ubah($data){
+function ubah($data)
+{
     global $conn;
 
     $id = $data["id"];
@@ -61,13 +64,14 @@ function ubah($data){
                 kategori_id ='$kategori_id'
                 WHERE id = $id
                 ";
-                
+
     mysqli_query($conn, $query);
-    
+
     return mysqli_affected_rows($conn);
 }
 
-function upload() {
+function upload()
+{
     $namaFile = $_FILES['Gambar']['name'];
     $ukuranFile = $_FILES['Gambar']['size'];
     $error = $_FILES['Gambar']['error'];
@@ -79,7 +83,7 @@ function upload() {
                 </script>";
         return false;
     }
-    
+
     $ekstensiGambarValid = ['jpg', 'jpeg', 'png'];
     $ekstensiGambar = explode('.', $namaFile);
     $ekstensiGambar = strtolower(end($ekstensiGambar));
@@ -97,23 +101,25 @@ function upload() {
                 </script>";
         return false;
     }
-    
+
     //lolos pengecekan, gambar siap diupload
     //generate nama gambar
     $namaFileBaru = uniqid();
-    $namaFileBaru.= '.';
-    $namaFileBaru.= $ekstensiGambar;
-    move_uploaded_file($tmpName, 'img/'. $namaFileBaru);
+    $namaFileBaru .= '.';
+    $namaFileBaru .= $ekstensiGambar;
+    move_uploaded_file($tmpName, 'img/' . $namaFileBaru);
     return $namaFileBaru;
 }
 
-function hapus($id) {
+function hapus($id)
+{
     global $conn;
     mysqli_query($conn, "DELETE FROM spesifikasi WHERE id = $id");
     return mysqli_affected_rows($conn);
 }
 
-function cari($keyword) {
+function cari($keyword)
+{
     $query = "SELECT * FROM spesifikasi
                 WHERE
                 Merek LIKE '%$keyword%' OR
@@ -126,7 +132,8 @@ function cari($keyword) {
     return query($query);
 }
 
-function registrasi($data) {
+function registrasi($data)
+{
     global $conn;
 
     $username = strtolower(stripslashes($data["username"]));
@@ -159,4 +166,3 @@ function registrasi($data) {
         return false;
     }
 }
-?>  

@@ -10,14 +10,23 @@ $query = "SELECT * FROM spesifikasi WHERE
     $spesifikasi = query($query); 
 ?>
 
-    <div class="row justify-content-center">
-        <?php foreach ($spesifikasi as $sps) : ?>
-        <div class="card m-4" style="width: 18rem;">
-            <img src="img/<?= $sps['Gambar']; ?>" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h4 class="card-title"><?= $sps['Merek']; ?></h4>
-                        <p class="card-text"><?= $sps['Deskripsi']; ?></p>
-                </div>
+<section id="Collections">
+    <div class="container" id="container">
+        <div class="row text-center ">
+            <div class="col">
+                <h1>Colections</h1>
+            </div>
         </div>
-        <?php endforeach; ?>    
+        <div class="row justify-content-center">
+            <?php foreach ($spesifikasi as $sps) : ?>
+            <div class="card m-4" style="width: 18rem;">
+                <img src="img/<?= $sps['Gambar']; ?>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title"><?= $sps['Merek']; ?></h4>
+                        <p class="card-text"><?= $sps['Deskripsi']; ?></p>
+                    </div>
+            </div>
+            <?php endforeach; ?>    
+        </div>
     </div>
+</section>
