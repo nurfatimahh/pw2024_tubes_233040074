@@ -36,7 +36,7 @@ $kategori = query("SELECT * FROM kategori");
               </li>
             </ul>
             <form class="d-flex" action="" method="POST">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="keyword" autocomplete="off">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="keyword" id="keyword" autocomplete="off">
               <button class="btn btn-outline-success me-4 tombol-cari" type="submit" name="cari">Search</button>
             </form>
             <button type="submit" class="btn btn-dark ">
@@ -48,11 +48,6 @@ $kategori = query("SELECT * FROM kategori");
 </nav>
 <!-- Akhir Navbar -->
   
-<!-- <form class="d-flex" action="" method="post">
-  <input type="text" name="keyword" size="40" placeholder="search.." autocomplete="off" autofocus class="keyword">
-  <button type="submit" name="search" class="tombol-cari">Search</button>
-</form> -->
-
 <div class="container">
   <br>
   <h1 class="mt-4 pt-4 text-center">Daftar Mobil</h1>
@@ -101,6 +96,6 @@ $kategori = query("SELECT * FROM kategori");
   </div>
 </div>
 
-    <srcipt src="js/script.js"></script>
+    <script src="js/scriptuser.js"></script>
   </body>
 </html> 

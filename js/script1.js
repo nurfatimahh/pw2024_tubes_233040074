@@ -16,7 +16,7 @@ keyword.addEventListener("keyup", function() {
  };
 
  //kirim request
- xhr.open("GET", "ajax/ajaxuser.php?keyword=" + keyword.value, true);
+ xhr.open("GET", "ajax/ajaxtampilan.php?keyword=" + keyword.value, true);
  xhr.send();
 
 });

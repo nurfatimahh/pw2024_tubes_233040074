@@ -1,11 +1,14 @@
 <?php
-require 'functions.php';
+require '../functions.php';
 $keyword =$_GET["keyword"];
 
 $query = "SELECT * FROM spesifikasi WHERE
-        nama LIKE '%$keyword%' OR
-        merk LIKE '%$keyword%' OR
-        harga LIKE '%$keyword%'
+        kategori_id LIKE '%$keyword%' OR
+        Merek LIKE '%$keyword%' OR
+        Harga LIKE '%$keyword%' OR
+        Launching LIKE '%$keyword%' OR
+        Mesin LIKE '%$keyword%' OR
+        Deskripsi LIKE '%$keyword%'
     ";
     $spesifikasi = query($query); 
 ?>

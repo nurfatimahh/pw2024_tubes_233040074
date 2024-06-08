@@ -4,9 +4,6 @@
 body{
     background: f1fbff;
 }
-.kartu {
-    background: linear-gradient(rgb(232, 136, 152), rgb(90, 90, 242));
-}
 .section-padding{
     padding: 50px 0;
 }
@@ -19,7 +16,7 @@ body{
     z-index: 2;
 }
 .carousel-caption h5{
-    font-size: 45px;
+    font-size: 60px;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-top: 25px;
@@ -27,7 +24,7 @@ body{
 .carousel-caption  p{
     width: 60%;
     margin: auto;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.9;
 }
 .carousel-inner::before {
@@ -40,14 +37,19 @@ body{
     background: rgba(0,0,0,0.7);
     z-index: 1;
 }
+.navbar {
+    padding: 15px 0;
+    background: #b02929;
+    border-bottom: 1px solid #eee;
+}
 .navbar-nav a{
     font-size: 10px;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 5;
 }
 .navbar-light .navbar-brand{
     color: #000;
-    font-size: 25px;
+    font-size: 20px;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 2px;
