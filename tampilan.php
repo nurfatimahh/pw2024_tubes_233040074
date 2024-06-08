@@ -61,7 +61,7 @@ if( isset($_POST["cari"]) ) {
         </ul>
         <form class="d-flex" action="" method="POST">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="keyword" id="keyword" autocomplete="off">
-              <button class="btn btn-outline-success me-4 tombol-cari" type="submit" name="cari">Search</button>
+              <button class="btn btn-outline-success me-4 tombol-cari" id="tombol-cari" type="submit" name="cari">Search</button>
             </form>
 </div>
 </div>
