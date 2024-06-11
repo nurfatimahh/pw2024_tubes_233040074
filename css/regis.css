@@ -1,10 +1,10 @@
 .container {
-  max-width: 700px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 1000px;
+  padding: 30px;
 }
 body {
-  background: cadetblue;
+  background: linear-gradient(rgb(68, 76, 222), rgb(16, 16, 250));
 }
 h1 {
   color: rgb(255, 255, 255);

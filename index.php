@@ -121,7 +121,7 @@ if (isset($_POST["cari"])) {
                         <img src="img/about.jpg" class="img-fluid ">
                     </div>
                     <div class="col-md-4 m-5">
-                        <p></p>
+                        <p>Berbagai pameran mobil akan diselenggarakan di Indonesia pada 2024.Pasar mobil di Indonesia diketahui telah kembali pulih dari pandemi Covid-19 yang sempat melanda Tanah Air sejak 2020.Dengan adanya pameran-pameran mobil yang digelar pada 2024, diharapkan nantinya ada pertumbuhan angka penjualan mobil di Indonesia signifikan</p>
                     </div>
                 </div>
             </div>
