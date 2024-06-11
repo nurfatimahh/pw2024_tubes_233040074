@@ -40,7 +40,7 @@ $kategori = query("SELECT * FROM kategori");
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top d-print-none" style="background: linear-gradient(rgb(232, 136, 152), rgb(90, 90, 242))">
     <div class="container">
-      <a class="navbar-brand" href="#">Aston Martin</a>
+      <a class="navbar-brand" href="#">SportAutoExpo</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -51,6 +51,9 @@ $kategori = query("SELECT * FROM kategori");
           </li>
           <!-- <button class=btn btn-primary onclick="window.print();">Print</button> -->
           <a class="nav-link" onclick="window.print();">Cetak</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="profile.php" target="_blank">Profile</a>
           </li>
         </ul>
         <form class="d-lg-flex flex-wrap flex-lg-nowrap" action="" method="POST">

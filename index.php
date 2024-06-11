@@ -81,21 +81,18 @@ if (isset($_POST["cari"])) {
                         <img src="img/backhome1.jpg" class="d-block w-100" alt="...">
                         <div class="carousel-caption">
                             <h5>Luxury British Sport Car</h5>
-                            <p>Some representative placeholder content for the first slide.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="img/backhome2.jpg" class="d-block w-100" alt="...">
                         <div class="carousel-caption">
                             <h5>The New Power Within</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="img/backhome3.jpg" class="d-block w-100" alt="...">
                         <div class="carousel-caption">
                             <h5>The Louwman Museum The Hague</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
                         </div>
                     </div>
                 </div>
@@ -124,7 +121,7 @@ if (isset($_POST["cari"])) {
                         <img src="img/about.jpg" class="img-fluid ">
                     </div>
                     <div class="col-md-4 m-5">
-                        <p>lorrem </p>
+                        <p></p>
                     </div>
                 </div>
             </div>

@@ -165,4 +165,30 @@ function registrasi($data)
                 </script>";
         return false;
     }
+    function ubahprofile($data)
+    {
+        global $conn;
+
+
+        $username = strtolower(stripslashes($data["username"]));
+        $password = mysqli_real_escape_string($conn, $data["password"]);
+
+
+        //enkripsi password
+        $password = password_hash($password, PASSWORD_DEFAULT);
+
+        //tambah user baru
+        mysqli_query($conn, "INSERT INTO users VALUES(NULL, '$username', '$password')");
+
+        return mysqli_affected_rows($conn);
+
+        //cek username sudah ada atau belum
+        $result = mysqli_query($conn, "SELECT username FROM users WHERE username = '$username'");
+        if (mysqli_fetch_assoc($result)) {
+            echo "<script>
+                    alert('Username sudah terdaftar!');
+                    </script>";
+            return false;
+        }
+    }
 }

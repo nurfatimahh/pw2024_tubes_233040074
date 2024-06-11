@@ -76,7 +76,7 @@ if (isset($_POST["submit"])) {
                 <input type="file" name="Gambar" id="Gambar" class="form-control">
             </div>
             <div class="mb-3">
-                <button type="submit" name="submit">Tambah Data</button>
+                <button type="submit" name="submit" class="btn btn-primary">Tambah Data</button>
             </div>
         </form>
     </div>
